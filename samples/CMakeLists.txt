@@ -38,6 +38,10 @@ add_executable( detect-from-file detection/detect-from-file.cpp)
 target_link_libraries( detect-from-file chilitags_static )
 target_link_libraries( detect-from-file ${OpenCV_LIBS} )
 
+add_executable( detect-from-video detection/detect-from-video.cpp)
+target_link_libraries( detect-from-video chilitags_static )
+target_link_libraries( detect-from-video ${OpenCV_LIBS} )
+
 add_executable( tracking tracking/tracking.cpp)
 target_link_libraries( tracking chilitags )
 target_link_libraries( tracking ${OpenCV_LIBS} )
