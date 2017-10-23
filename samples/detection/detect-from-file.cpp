@@ -37,8 +37,25 @@ int main(int argc, char* argv[])
 
     cv::Mat image = cv::imread(argv[1]);
     if(image.data) {
-        for (const auto &tag : chilitags::Chilitags().find(image))
-            cout << tag.first << "\n";
+        for (const auto &tag : chilitags::Chilitags().find(image)){
+                const cv::Mat_<cv::Point2f> corners(tag.second);
+                // frame
+                cout << "1" << "\t";
+                // Id
+                cout << tag.first << "\t";
+                // Top left
+                cout << corners(0).x << "\t";
+                cout << corners(0).y << "\t";
+                // Top right
+                cout << corners(1).x << "\t";
+                cout << corners(1).y << "\t";
+                // Bottom right
+                cout << corners(2).x << "\t";
+                cout << corners(2).y << "\t";
+                // Bottom left
+                cout << corners(3).x << "\t";
+                cout << corners(3).y << "\n";
+            }
 
         return 0;
     }
