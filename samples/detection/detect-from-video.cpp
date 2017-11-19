@@ -57,7 +57,6 @@ int main(int argc, char* argv[])
             // Output frame number here for a semi-structured output
             for (const auto &tag : tags) {
                 const cv::Mat_<cv::Point2f> corners(tag.second);
-                cout << argv[1] << "\t";
                 cout << frame << "\t";
                 // Id
                 cout << tag.first << "\t";
