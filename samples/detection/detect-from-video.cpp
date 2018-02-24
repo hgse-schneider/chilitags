@@ -47,7 +47,9 @@ int main(int argc, char* argv[])
     // Chilitags actually removes it.
     // The following line disables this and get the raw results.
     chilitags::Chilitags chilitags;
-    chilitags.setFilter(0, 0.0f);
+    chilitags.setFilter(25, 0.0f);
+    chilitags.setCornerRefinement(true);
+    chilitags.setPerformance(chilitags::Chilitags::ROBUST);
 
     cv::Mat image;
     capture >> image;
