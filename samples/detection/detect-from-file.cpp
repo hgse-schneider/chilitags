@@ -44,17 +44,17 @@ int main(int argc, char* argv[])
                 // Id
                 cout << tag.first << "\t";
                 // Top left
-                cout << corners(0).x << "\t";
-                cout << corners(0).y << "\t";
+                cout << static_cast<int>(corners(0).x) << "\t";
+                cout << static_cast<int>(corners(0).y) << "\t";
                 // Top right
-                cout << corners(1).x << "\t";
-                cout << corners(1).y << "\t";
+                cout << static_cast<int>(corners(1).x) << "\t";
+                cout << static_cast<int>(corners(1).y) << "\t";
                 // Bottom right
-                cout << corners(2).x << "\t";
-                cout << corners(2).y << "\t";
+                cout << static_cast<int>(corners(2).x) << "\t";
+                cout << static_cast<int>(corners(2).y) << "\t";
                 // Bottom left
-                cout << corners(3).x << "\t";
-                cout << corners(3).y << "\n";
+                cout << static_cast<int>(corners(3).x) << "\t";
+                cout << static_cast<int>(corners(3).y) << "\n";
             }
 
         return 0;
