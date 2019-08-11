@@ -51,8 +51,13 @@ int main(int argc, char* argv[])
     chilitags.setCornerRefinement(true);
     chilitags.setPerformance(chilitags::Chilitags::ROBUST);
 
-    cout << "Frame" << "\t" << "Tag" << "\t" <<"TopLeft" << "\t" << "TopRight" << "\t" << "BottomRight" << "\t" << "BottomLeft" << "\n";
 
+    cout << "Frame" << "\t" << "Tag" << "\t" 
+    <<"TopLeftX" << "\t" <<"TopLeftY" << "\t" 
+    << "TopRightX" << "\t" << "TopRightY" << "\t" 
+    << "BottomRightX" << "\t" << "BottomRightY" << "\t" 
+    << "BottomLeftX" << "\t" << "BottomLeftY" << "\n";
+    
     cv::Mat image;
     capture >> image;
     for (int frame = 0; image.data; ++frame) {
