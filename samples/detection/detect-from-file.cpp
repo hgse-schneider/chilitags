@@ -35,6 +35,8 @@ int main(int argc, char* argv[])
         return 1;
     }
 
+    cout << "Frame" << "\t" << "Tag" << "\t" <<"TopLeft" << "\t" << "TopRight" << "\t" << "BottomRight" << "\t" << "BottomLeft" << "\n";
+
     cv::Mat image = cv::imread(argv[1]);
     if(image.data) {
         for (const auto &tag : chilitags::Chilitags().find(image)){
