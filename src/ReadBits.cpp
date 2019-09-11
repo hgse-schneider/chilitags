@@ -68,10 +68,10 @@ const std::vector<unsigned char>& ReadBits::operator()(const cv::Mat &inputImage
 {
     static const float TAG_SIZE = 2*TAG_MARGIN+DATA_SIZE;
     static const Quad NORMALIZED_CORNERS = {
-        0.f,      0.f,
         TAG_SIZE,      0.f,
+        0.f,      0.f,
+        0.f, TAG_SIZE,
         TAG_SIZE, TAG_SIZE,
-        0.f, TAG_SIZE
     };
 
     cv::Mat_<cv::Point2f> cornersCopy(corners);
